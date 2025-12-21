@@ -1,0 +1,135 @@
+/* Footer.css */
+.footer {
+    background-color: var(--color-surface);
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 640px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    color: var(--color-text-main);
+}
+
+.footer-logo span {
+    color: var(--color-primary);
+}
+
+.footer-desc {
+    color: var(--color-text-light);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icon-wrapper {
+    padding: 0.5rem;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon-wrapper:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.footer-heading {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-main);
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.footer-link {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--color-primary);
+}
+
+.footer-contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+}
+
+.footer-icon-small {
+    color: var(--color-primary);
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid #dcd8cc;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #888;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 1.5rem;
+}

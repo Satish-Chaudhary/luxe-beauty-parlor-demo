@@ -1,0 +1,335 @@
+/* Gallery.css */
+.gallery-page {
+    padding-top: 80px;
+    background-color: var(--color-bg);
+    min-height: 100vh;
+}
+
+/* 1. Hero */
+.gallery-hero {
+    padding: 6rem 0 3rem 0;
+    background-color: #ededed;
+    /* Light grey bg from Ref */
+    text-align: center;
+}
+
+.center-hero {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.gallery-badge {
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-light);
+}
+
+.gallery-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 1.5rem;
+    line-height: 1;
+}
+
+.gallery-desc {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+/* 2. Filters */
+.filters-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.filter-pills {
+    display: flex;
+    gap: 0.5rem;
+    background: white;
+    padding: 0.5rem;
+    border-radius: 9999px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.filter-pill {
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    transition: all 0.2s;
+}
+
+.filter-pill.active {
+    background-color: var(--color-primary);
+    /* Use Primary instead of yellow */
+    color: white;
+}
+
+.filter-pill:hover:not(.active) {
+    background-color: #f5f5f5;
+}
+
+/* 3. Pinterest Masonry Grid */
+.gallery-section {
+    padding: 2rem 0 6rem;
+    background-color: var(--color-bg);
+}
+
+.container-fluid-gallery {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.pinterest-grid {
+    display: flex;
+    margin-left: -24px;
+    /* gutter size offset */
+    width: auto;
+}
+
+.pinterest-grid-column {
+    padding-left: 24px;
+    /* gutter size */
+    background-clip: padding-box;
+}
+
+.gallery-item-wrapper {
+    margin-bottom: 24px;
+}
+
+/* Premium Pin Card */
+.premium-pin-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.premium-pin-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: var(--color-primary-light);
+}
+
+.pin-image-box {
+    position: relative;
+    overflow: hidden;
+    background-color: #f8f8f8;
+}
+
+.pin-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.premium-pin-card:hover .pin-img {
+    transform: scale(1.05);
+}
+
+/* Actions Overlay */
+.pin-overlay-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    z-index: 3;
+}
+
+.premium-pin-card:hover .pin-overlay-bottom {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.pin-cta-btn {
+    background: white;
+    color: var(--color-text-main);
+    padding: 0.6rem 2.5rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.pin-cta-btn:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
+
+/* Content Area */
+.pin-content {
+    padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.pin-cat {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-primary);
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.pin-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 0.5rem;
+}
+
+.pin-description {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* 4. CTA Dark */
+.gallery-cta-dark {
+    background-color: #1f201d;
+    /* Dark from ref image */
+    padding: 6rem 0;
+    text-align: center;
+    color: white;
+}
+
+.cta-dark-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta-dark-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.cta-dark-text {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 3rem;
+}
+
+.btn-primary-glow {
+    background-color: var(--color-primary);
+    /* Glow button */
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-primary-glow:hover {
+    box-shadow: 0 0 20px rgba(196, 111, 107, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .container-fluid-gallery {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-hero {
+        padding: 4rem 0 2rem 0;
+    }
+
+    .gallery-title {
+        font-size: 2.5rem;
+    }
+
+    .filter-pills {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 0.5rem 1rem;
+        max-width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    .filter-pill {
+        white-space: nowrap;
+        background: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .container-fluid-gallery {
+        padding: 0 1rem;
+    }
+
+    .pinterest-grid {
+        margin-left: -16px;
+    }
+
+    .pinterest-grid-column {
+        padding-left: 16px;
+    }
+
+    .gallery-item-wrapper {
+        margin-bottom: 16px;
+    }
+
+    .pin-overlay-bottom {
+        opacity: 1;
+        transform: none;
+    }
+
+    .cta-dark-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-title {
+        font-size: 2rem;
+    }
+
+    .gallery-desc {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .btn-primary-glow {
+        width: 100%;
+        justify-content: center;
+    }
+}
