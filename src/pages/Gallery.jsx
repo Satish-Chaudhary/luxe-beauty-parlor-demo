@@ -94,30 +94,33 @@ const Gallery = () => {
     }, { scope: containerRef });
 
     // Handle gallery item animations separately to work with filtering
-    useEffect(() => {
-        // Clear any existing animations on the items
+    useGSAP(() => {
+        // Clear any existing animations in this scope
         gsap.killTweensOf('.motion-item');
 
         // Small delay to ensure Masonry has updated the DOM
         const timer = setTimeout(() => {
-            const items = document.querySelectorAll('.motion-item');
+            const items = containerRef.current.querySelectorAll('.motion-item');
             if (items.length > 0) {
-                gsap.fromTo('.motion-item',
-                    { opacity: 0, y: 20 },
+                gsap.fromTo(items,
+                    { opacity: 0, y: 30 },
                     {
                         opacity: 1,
                         y: 0,
                         duration: 0.6,
-                        stagger: 0.02,
+                        stagger: {
+                            amount: 0.4,
+                            from: "start"
+                        },
                         ease: 'power2.out',
                         clearProps: 'all'
                     }
                 );
             }
-        }, 100);
+        }, 50); // Reduced delay for snappier feel
 
         return () => clearTimeout(timer);
-    }, [filter]);
+    }, { dependencies: [filter], scope: containerRef });
 
     const filteredImages = filter === "All"
         ? images

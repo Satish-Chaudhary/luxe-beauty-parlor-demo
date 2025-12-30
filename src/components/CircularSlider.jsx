@@ -54,7 +54,7 @@ const CircularSlider = () => {
                                         }}
                                         whileHover={{ scale: 1.05, zIndex: 10 }}
                                     >
-                                        <img src={item.url} alt={item.title} className="circular-img" />
+                                        <img src={item.url} alt={item.title} className="circular-img" loading="lazy" />
                                         <div className="circular-info">
                                             <span className="circular-item-title">{item.title}</span>
                                         </div>

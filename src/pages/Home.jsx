@@ -202,11 +202,13 @@ const Home = () => {
                                 src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1976&auto=format&fit=crop"
                                 alt="Natural Products"
                                 className="philosophy-img-1"
+                                loading="lazy"
                             />
                             <img
                                 src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?q=80&w=2070&auto=format&fit=crop"
                                 alt="Spa Treatment"
                                 className="philosophy-img-2"
+                                loading="lazy"
                             />
                         </motion.div>
                         <motion.div variants={fadeInUp}>

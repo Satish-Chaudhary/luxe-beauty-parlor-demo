@@ -117,6 +117,7 @@ const Contact = () => {
                                 src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop"
                                 className="map-img"
                                 alt="Map Background"
+                                loading="lazy"
                             />
                             <div className="map-marker">
                                 <MapPin size={20} color="var(--color-primary)" />

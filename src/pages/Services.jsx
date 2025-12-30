@@ -62,6 +62,7 @@ function SquareWithOffset({ index, parentIndex }) {
                 alt={`Square ${index}`}
                 className="square-image"
                 draggable={false}
+                loading="lazy"
             />
         </motion.div>
     );
@@ -114,6 +115,7 @@ function Square({ index, children, className }) {
                 alt={`Square ${index}`}
                 className="square-image"
                 draggable={false}
+                loading="lazy"
             />
             <motion.div
                 className="square-content"
@@ -239,7 +241,7 @@ const ServiceModal = ({ service, onClose }) => {
                 </div>
                 <div className="modal-inner-grid">
                     <div className="modal-image-side">
-                        <img src={service.img} alt={service.title} />
+                        <img src={service.img} alt={service.title} loading="lazy" />
                         {service.tag && <span className="modal-tag-floating">{service.tag}</span>}
                     </div>
                     <div className="modal-info-side">
@@ -301,7 +303,7 @@ const ReviewMarquee = () => {
                 <div className="marquee-track">
                     {[...reviewsMarquee, ...reviewsMarquee].map((review, idx) => (
                         <div key={`${review.id}-${idx}`} className="review-glass-card">
-                            <img src={review.img} alt={review.name} className="review-avatar" />
+                            <img src={review.img} alt={review.name} className="review-avatar" loading="lazy" />
                             <div className="review-info">
                                 <span className="review-name">{review.name}</span>
                                 <div className="review-stars">
@@ -361,7 +363,7 @@ const CategorySlider = ({ category, items, onSelect }) => {
                             whileTap={{ scale: 0.95 }}
                         >
                             <div className="circle-image-wrapper">
-                                <img src={item.img} alt={item.title} className="circle-image" />
+                                <img src={item.img} alt={item.title} className="circle-image" loading="lazy" />
                                 <div className="circle-hover-overlay">
                                     <Eye color="white" size={32} />
                                 </div>
@@ -551,7 +553,7 @@ const Services = () => {
                                 className={`testimonial-grid-item-exact photo-item-${idx + 1}`}
                             >
                                 <div className="testimonial-photo-wrapper-exact">
-                                    <img src={t.img} alt={t.name} className="testimonial-photo-exact" />
+                                    <img src={t.img} alt={t.name} className="testimonial-photo-exact" loading="lazy" />
                                     <div className="testimonial-photo-overlay-exact">
                                         <div className="photo-info-exact">
                                             <span className="photo-name-exact">{t.name}</span>

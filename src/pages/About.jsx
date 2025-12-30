@@ -114,6 +114,7 @@ const About = () => {
                             src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?q=80&w=2070&auto=format&fit=crop"
                             alt="Salon Interior"
                             className="hero-img-rounded"
+                            loading="lazy"
                         />
                     </div>
                 </div>
@@ -128,6 +129,7 @@ const About = () => {
                             src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1976&auto=format&fit=crop"
                             alt="Organic Products"
                             className="story-img"
+                            loading="lazy"
                         />
                     </div>
                     <div className="story-content-col">
@@ -190,7 +192,7 @@ const About = () => {
                         ].map((member, i) => (
                             <div className="team-card-portrait" key={i}>
                                 <div className="team-portrait-img">
-                                    <img src={member.img} alt={member.name} />
+                                    <img src={member.img} alt={member.name} loading="lazy" />
                                     <div className="team-overlay">
                                         <span className="expert-badge">{member.expertise}</span>
                                         <div className="social-row">
